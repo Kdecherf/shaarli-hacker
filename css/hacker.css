@@ -61,6 +61,8 @@ pre, code{
 	height: 44px;
 	color: #333;
 	z-index: 3;
+   display: flex;
+   justify-content: space-between;
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 }
@@ -68,15 +70,7 @@ header ul {
    list-style-type: none;
    padding: 0;
    margin: 0;
-}
-header ul.header-menu-left {
-   float: left;
-}
-header ul.header-menu-right {
-   float: right;
-}
-header ul li {
-   display: inline-block;
+   display: flex;
 }
 header ul li a {
    line-height: 22px!important;
@@ -89,14 +83,11 @@ header ul li a:hover {
 }
 
 .view>header h1{
-   display: inline-block;
 	cursor: default;
 	padding: 0;
 	text-align: center;
 	font-size: 1em;
 	font-weight: normal;
-   line-height: 44px;
-	margin: auto;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
@@ -540,7 +531,11 @@ ol.grouped-tableview-links li>a:hover{
 	width: device-width;
 	zoom: 1.0;
 }
-
+@media only screen and (max-width: 400px){
+   .nomobile {
+      display: none;
+   }
+}
 @media only screen and (min-width: 788px){
 	body{
 		background-color: #fafafa;
@@ -557,3 +552,4 @@ ol.grouped-tableview-links li>a:hover{
 		margin-top: 0;
 	}
 }
+
