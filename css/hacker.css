@@ -10,9 +10,6 @@ body{
 	overflow-y: scroll;
 	visibility: visible;
 }
-a:link{
-	color: #007aff;
-}
 button{
 	font-family: inherit;
 	outline: 0;
@@ -61,85 +58,45 @@ pre, code{
 .view>header{
 	border-bottom: 1px solid #ddd;
 	background-color: rgba(255,255,255,.95);
-	line-height: 44px;
 	height: 44px;
 	color: #333;
-	position: absolute; /* if position:fixed is not supported */
-	position: fixed;
-	left: 0;
-	top: 0;
-	right: 0;
 	z-index: 3;
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(10px);
 }
-.header-button{
-	position: absolute;
-	top: 0;
-	padding: 7px 5px;
-	line-height: 1em;
-	cursor: pointer;
+header ul {
+   list-style-type: none;
+   padding: 0;
+   margin: 0;
 }
-.header-button button{
-	pointer-events: none;
-	min-width: 50px;
-	height: 30px;
-	line-height: 25px;
-	font-weight: normal;
-	font-size: 15px;
-	text-align: center;
-	color: #f60;
-	padding: 0 4px;
-	margin: 0;
-	text-decoration: none;
-	border: 0;
-	background-color: transparent;
-	cursor: pointer;
+header ul.header-menu-left {
+   float: left;
 }
-.header-button:hover{
+header ul.header-menu-right {
+   float: right;
+}
+header ul li {
+   display: inline-block;
+}
+header ul li a {
+   line-height: 22px!important;
+   padding: 11px;
+   color: #FFA000;
+   text-decoration: none;
+}
+header ul li a:hover {
 	background-color: #F6F6EF;
-}
-.header-button:active button{
-	opacity: .5;
-}
-.header-button button::-moz-focus-inner{
-	padding: 0;
-	border: 0;
-}
-.header-button-icon button{
-	min-width: 0;
-	padding: 0 8px;
-}
-.header-button-icon button img{
-	vertical-align: text-bottom;
-}
-.header-back-button button{
-}
-.header-button-left{
-	left: 0;
-}
-.header-button-right{
-	right: 0;
-}
-
-#view-comments .header-button-left button,
-#view-about .header-button-left button{
-	overflow: hidden;
-	text-indent: -999px;
-	min-width: 32px;
-	background-image: url(../images/web/home-icon.svg);
-	background-size: 19.5px 17px;
-	background-repeat: no-repeat;
-	background-position: center;
 }
 
 .view>header h1{
+   display: inline-block;
 	cursor: default;
 	padding: 0;
 	text-align: center;
 	font-size: 1em;
 	font-weight: normal;
-	margin: 0;
+   line-height: 44px;
+	margin: auto;
 	white-space: nowrap;
 	text-overflow: ellipsis;
 	overflow: hidden;
