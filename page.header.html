@@ -1,0 +1,45 @@
+
+<ul class="header-menu-left">
+   <li><a href="{$titleLink}" title="Home" class="fa fa-home"><span class="sr-only">Home</span></a></li>
+   <li><a href="?do=tagcloud" title="Tag cloud" class="fa fa-tags"><span class="sr-only">Tag cloud</span></a></li>
+   <li><a href="#" title="Search" class="fa fa-search"><span class="sr-only">Search</span></a></li>
+</ul>
+
+<h1>{$shaarlititle}</h1>
+
+<ul class="header-menu-right">
+{if="!empty($_GET['source']) && $_GET['source']=='bookmarklet'"}
+    {ignore} When called as a popup from bookmarklet, do not display menu. {/ignore}
+{else}
+<li>
+    {if="isLoggedIn()"}
+    <li><a href="?do=tools" title="Tools" class="fa fa-gear"><span class="sr-only">Tools</span></a></li>
+    <li><a href="?do=addlink" title="Add link" class="fa fa-plus"><span class="sr-only">Add link</span></a></li>
+    <li><a href="?do=logout" title="Logout" class="fa fa-sign-out"><span class="sr-only">Logout</span></a></li>
+    {else}
+    <li><a href="?do=login" title="Login" class="fa fa-sign-in"><span class="sr-only">Login</span></a></li>
+    {/if}
+    <li><a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile fa fa-rss"><span class="sr-only">RSS Feed</span></a></li>
+    {if="$showatom"}
+    <li><a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile">ATOM Feed</a></li>
+    {/if}
+    {loop="$plugins_header.buttons_toolbar"}
+        <li><a
+            {loop="$value.attr"}
+                {$key}="{$value}"
+            {/loop}>
+            {$value.html}
+        </a></li>
+    {/loop}
+{/if}
+</ul>
+
+{if="!empty($plugin_errors) && isLoggedIn()"}
+    <ul class="errors">
+        {loop="$plugin_errors"}
+            <li>{$value}</li>
+        {/loop}
+    </ul>
+{/if}
+
+
