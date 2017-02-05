@@ -151,50 +151,63 @@ header ul li a:hover {
 	padding: 0;
 	position: relative;
 }
-.tableview-links li>a{
+.tableview-links li a.detail-disclosure{
 	line-height: 1.2em;
 	color: #000;
 	display: block;
-	padding: 10px 5px;
+	padding: 10px 0;
 	text-decoration: none;
 }
-.tableview-links li>a:visited{
+.tableview-links li a:visited{
 	color: #888;
 }
-.tableview-links li>a:hover{
+.tableview-links li:hover{
 	background-color: #F6F6EF;
 }
-.tableview-links li>a *{
-	pointer-events: none;
-}
-.tableview-links li>a .number{
-	font-weight: lighter;
-	text-align: right;
-	width: 3.5ex;
-	color: #666d74;
-	position: absolute;
-	left: 5px;
-	top: 10px;
-}
-.tableview-links li>a .story{
+.tableview-links li .story{
 	margin-left: 4ex;
 	padding-left: 5px;
 }
-.tableview-links li>a .story b{
+.tableview-links li .story strong{
 	font-weight: normal;
 }
-.tableview-links li>a .metadata{
+.tableview-links li .metadata{
 	display: block;
 	font-size: 14px;
 	color: #666d74;
 }
-.tableview-links li>a:hover .link-text{
+.tableview-links li .metadata .linkdescription .markdown p {
+   margin: 0.5em 0;
+}
+.tableview-links li .metadata .inline-block {
+   font-size: 12px;
+}
+.tableview-links li .metadata .inline-block:not(:last-of-type):after,
+.tableview-links li .metadata .linktaglist .linktag:not(:last-of-type):after {
+   content:' · ';
+}
+.tableview-links li .metadata .inline-block img {
+   vertical-align: top;
+}
+.tableview-links li a:hover .link-text{
 	text-decoration: underline;
 }
-.tableview-links li>a.detail-disclosure{
+.tableview-links li .metadata .linktaglist {
+   padding: 5px 0px;
+}
+.tableview-links li .metadata .linktaglist .linktag a {
+   color: #00897B;
+   font-style: italic;
+   text-decoration: none;
+}
+.tableview-links li .metadata .linktaglist .linktag a:hover {
+   text-decoration: underline;
+   color: #00695C;
+}
+.tableview-links li .detail-disclosure{
 	padding-right: 44px;
 }
-.tableview-links li>a.detail-disclosure-button{
+.tableview-links li .detail-disclosure-button{
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -205,7 +218,7 @@ header ul li a:hover {
 	text-align: center;
 	vertical-align: middle;
 }
-.tableview-links li>a.detail-disclosure-button span{
+.tableview-links li .detail-disclosure-button span{
 	display: inline-block;
 	width: 17px;
 	height: 17px;
@@ -213,10 +226,10 @@ header ul li a:hover {
 	background-size: 17px 17px;
 	margin: 15px 0;
 }
-.tableview-links li>a.detail-disclosure-button:active span{
+.tableview-links li .detail-disclosure-button:active span{
 	opacity: .5;
 }
-.tableview-links li>a.more-link{
+.tableview-links li .more-link{
 	color: #007aff;
 	cursor: pointer;
 	line-height: 3em;
@@ -224,7 +237,7 @@ header ul li a:hover {
 	display: block;
 	text-align: center;
 }
-.tableview-links li>a.more-link:active{
+.tableview-links li .more-link:active{
 	opacity: .5;
 }
 
@@ -486,6 +499,7 @@ ol.grouped-tableview-links li>a:hover{
 .link-text{
 	color: #003d80;
 	font-weight: normal;
+   font-size: 14px;
 }
 .inline-block{
 	display: inline-block;
