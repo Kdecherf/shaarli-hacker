@@ -182,6 +182,9 @@ header ul li a:hover {
 .tableview-links li .metadata .inline-block {
    font-size: 12px;
 }
+.tableview-links li .metadata .linkdate {
+   font-style: italic;
+}
 .tableview-links li .metadata .inline-block:not(:last-of-type):after,
 .tableview-links li .metadata .linktaglist .linktag:not(:last-of-type):after {
    content:' · ';
