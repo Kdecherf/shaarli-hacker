@@ -72,10 +72,12 @@ header ul {
    margin: 0;
    display: flex;
 }
+a {
+   color: #FFA000;
+}
 header ul li a {
    line-height: 22px!important;
    padding: 11px;
-   color: #FFA000;
    text-decoration: none;
 }
 header ul li a:hover {
@@ -139,20 +141,20 @@ header ul li a:hover {
    list-style: none;
    background-color: #fff;
 }
-.tableview li, .paging{
+.tableview li, .paging, footer{
    display: block;
    border-bottom: 1px solid #e0e0e0;
    padding: 10px;
 }
 .tableview-links li{
-   padding: 0;
+   padding: 10px 15px;
    position: relative;
 }
 .tableview-links li a.detail-disclosure{
    line-height: 1.2em;
    color: #000;
    display: block;
-   padding: 10px 0;
+   padding: 0;
    text-decoration: none;
 }
 .tableview-links li a:visited{
@@ -164,10 +166,6 @@ header ul li a:hover {
 .tableview-links li.private {
    background-color: #FFEBEE;
 }
-.tableview-links li .story{
-   margin-left: 4ex;
-   padding-left: 5px;
-}
 .tableview-links li .story strong{
    font-weight: normal;
    display: block;
@@ -176,6 +174,7 @@ header ul li a:hover {
    display: block;
    font-size: 14px;
    color: #666d74;
+   padding-top: 8px;
 }
 .tableview-links li .metadata .linkdescription .markdown p {
    margin: 0.5em 0;
@@ -267,6 +266,19 @@ header ul li a:hover {
    display: block;
 }
 
+footer {
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   font-size: 14px;
+}
+
+footer a {
+   text-decoration: none;
+}
+footer a:hover {
+   text-decoration: underline;
+}
 .view .post-content{
    min-height: 4em;
    overflow: hidden;
