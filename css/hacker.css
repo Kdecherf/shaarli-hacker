@@ -164,12 +164,16 @@ header ul li a:hover {
 .tableview-links li:hover{
 	background-color: #F6F6EF;
 }
+.tableview-links li.private {
+   background-color: #FFEBEE;
+}
 .tableview-links li .story{
 	margin-left: 4ex;
 	padding-left: 5px;
 }
 .tableview-links li .story strong{
 	font-weight: normal;
+   display: block;
 }
 .tableview-links li .metadata{
 	display: block;
@@ -503,6 +507,7 @@ ol.grouped-tableview-links li>a:hover{
 	color: #003d80;
 	font-weight: normal;
    font-size: 14px;
+   display: block;
 }
 .inline-block{
 	display: inline-block;
