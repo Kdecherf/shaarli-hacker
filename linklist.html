@@ -1,3 +1,4 @@
+<!--{$dateFormat = $conf->get('config.HACKER_PHP_DATE_PATTERN') ? $conf->get('config.HACKER_PHP_DATE_PATTERN') : '%c'}-->
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,9 +67,9 @@
                  <div class="metadata">
                    {if="$value.description"}<div class="linkdescription">{$value.description}</div>{/if}
                       {if="!$hide_timestamps || isLoggedIn()"}
-                       {$updated=$value.updated_timestamp ? 'Edited: '. strftime('%c', $value.updated_timestamp) : 'Permalink'}
+                       {$updated=$value.updated_timestamp ? 'Edited: '. strftime($dateFormat, $value.updated_timestamp) : 'Permalink'}
                        <span class="linkdate inline-block" title="{$updated}">
-                                   {function="strftime('%c', $value.timestamp)"}
+                                   {function="strftime($dateFormat, $value.timestamp)"}
                                    {if="$value.updated_timestamp"}*{/if}
                        </span>
                       {/if}
