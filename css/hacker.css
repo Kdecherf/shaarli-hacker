@@ -139,13 +139,10 @@ header ul li a:hover {
    list-style: none;
    background-color: #fff;
 }
-.tableview li{
+.tableview li, .paging{
    display: block;
-   border-top: 1px solid #e0e0e0;
+   border-bottom: 1px solid #e0e0e0;
    padding: 10px;
-}
-.tableview li:first-child{
-   border-top: 0;
 }
 .tableview-links li{
    padding: 0;
@@ -247,7 +244,28 @@ header ul li a:hover {
 .tableview-links li .more-link:active{
    opacity: .5;
 }
-
+.paging {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 14px;
+}
+.paging a {
+   color: #FFC107;
+   text-decoration: none;
+}
+.paging a:hover {
+   color: #FFA000;
+}
+.paging_state span {
+   margin: 0 7px;
+}
+.paging_filter {
+   text-align: right;
+}
+.paging_filter span {
+   display: block;
+}
 .grouped-tableview{
    margin: 10px 9px 11px;
    padding: 10px;
