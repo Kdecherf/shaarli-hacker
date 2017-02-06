@@ -243,6 +243,24 @@ header ul li a:hover {
 .tableview-links li .more-link:active{
    opacity: .5;
 }
+.tableview-links li.post-link {
+   display: flex;
+}
+.tableview-links li.post-link .linkeditbuttons {
+   margin-right: 10px;
+}
+.linkeditbuttons form {
+margin: 8px 0;
+}
+.linkeditbuttons button {
+   color: #FFA000;
+   background: none;
+   border: none;
+}
+.linkeditbuttons button:hover {
+   color: #FF6F00;
+   cursor: pointer;
+}
 .paging {
    display: flex;
    justify-content: space-between;

@@ -48,14 +48,13 @@
                     <div class="linkeditbuttons">
                         <form method="GET" class="buttoneditform">
                             <input type="hidden" name="edit_link" value="{$value.id}">
-                            <input type="image" alt="Edit" src="images/edit_icon.png#" title="Edit" class="button_edit">
-                        </form><br>
+                            <button type="submit" class="fa fa-pencil"><span class="sr-only">Edit</span></button>
+                        </form>
                         <form method="GET" class="buttoneditform">
                             <input type="hidden" name="lf_linkdate" value="{$value.id}">
                             <input type="hidden" name="token" value="{$token}">
                             <input type="hidden" name="delete_link">
-                            <input type="image" alt="Delete" src="images/delete_icon.png#" title="Delete"
-                                   class="button_delete" onClick="return confirmDeleteLink();">
+                            <button type="submit" class="fa fa-trash-o" onClick="return confirmDeleteLink()"><span class="sr-only">Delete</span></button>
                         </form>
                     </div>
                 {/if}
