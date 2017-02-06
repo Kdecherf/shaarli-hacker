@@ -42,7 +42,7 @@
     {/if}
     <ul class="tableview tableview-links">
         {loop="$links"}
-        <li{if="$value.class"} class="{$value.class} post-link"{/if}>
+        <li class="post-link{if="$value.class"} {$value.class}{/if}">
             <a id="{$value.shorturl}"></a>
                 {if="isLoggedIn()"}
                     <div class="linkeditbuttons">
