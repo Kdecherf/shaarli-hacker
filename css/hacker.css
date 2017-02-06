@@ -164,7 +164,16 @@ header ul li a:hover {
    background-color: #F6F6EF;
 }
 .tableview-links li.private {
-   background-color: #FFEBEE;
+   background-color: #FFF8E1;
+}
+.tableview-links li div.privatelink {
+   display: none;
+}
+.tableview-links li.private div.privatelink {
+   display: inline;
+   color: #C62828;
+   vertical-align: text-top;
+   font-size: 1.3em;
 }
 .tableview-links li .story strong{
    font-weight: normal;
@@ -186,7 +195,10 @@ header ul li a:hover {
    font-style: italic;
 }
 .tableview-links li .metadata .inline-block:not(:last-of-type):after,
-.tableview-links li .metadata .linktaglist .linktag:not(:last-of-type):after {
+.tableview-links li .metadata .linktaglist .linktag:not(:last-of-type):after,
+.tableview-links li.private .metadata .inline-block:last-of-type:after {
+/* the last selector is a workaround to add separator when lock is shown.
+ * font-awesome using :before to print its content */
    content:' · ';
 }
 .tableview-links li .metadata .inline-block img {
