@@ -13,6 +13,13 @@
 {else}
 <li>
     {if="isLoggedIn()"}
+    <li>
+		{if="$privateonly"}
+      <a href="?privateonly" class="fa fa-lock" title="Click to see all links"><span class="sr-only">Click to see all links</span></a>
+		{else}
+      <a href="?privateonly" class="fa fa-unlock-alt" title="Click to see only private links"><span class="sr-only">Click to see only private links</span></a>
+		{/if}
+    </li>
     <li><a href="?do=tools" title="Tools" class="fa fa-gear"><span class="sr-only">Tools</span></a></li>
     <li><a href="?do=addlink" title="Add link" class="fa fa-plus"><span class="sr-only">Add link</span></a></li>
     <li><a href="?do=logout" title="Logout" class="fa fa-sign-out"><span class="sr-only">Logout</span></a></li>
