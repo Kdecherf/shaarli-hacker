@@ -61,7 +61,7 @@
                 <div class="story">
                   <a href="{$value.real_url}" class="detail-disclosure">
                     <strong>{$value.title}</strong>
-                    <span class="link-text">{$value.url}</span>
+                    <span class="link-text">{function="preg_replace('@https?://@', '', $value.url)"}</span>
                   </a>
                  <div class="metadata">
                    {if="$value.description"}<div class="linkdescription">{$value.description}</div>{/if}
