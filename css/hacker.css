@@ -141,9 +141,45 @@ header ul li a:hover {
    list-style: none;
    background-color: #fff;
 }
-.tableview li, .paging, footer{
+.tableview li, .paging, #cloudtag {
    display: block;
    border-bottom: 1px solid #e0e0e0;
+   padding: 10px;
+}
+#cloudtag {
+}
+#cloudtag>div {
+   margin: 8px;
+   display: inline-block;
+}
+#cloudtag>div.tag-1 {
+   font-size: 0.8em;
+}
+#cloudtag>div.tag-2 {
+   font-size: 1.2em;
+}
+#cloudtag>div.tag-3 {
+   font-size: 1.6em;
+}
+#cloudtag>div.tag-4 {
+   font-size: 2em;
+}
+#cloudtag>div.tag-5 {
+   font-size: 2.5em;
+}
+#cloudtag>div.tag-6 {
+   font-size: 3.2em;
+}
+#cloudtag a {
+   color: #4A4A4A;
+   border-bottom: 1px dotted #515151;
+   text-decoration: none;
+}
+#cloudtag a:hover {
+   border-bottom-style: solid;
+}
+footer {
+   display: block;
    padding: 10px;
 }
 .tableview-links li{

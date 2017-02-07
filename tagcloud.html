@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>{include="includes"}</head>
+<body>
+<div class="view">
+   <header>
+      {include="page.header"}
+   </header>
+
+       <div id="plugin_zone_start_tagcloud" class="plugin_zone">
+           {loop="$plugin_start_zone"}
+               {$value}
+           {/loop}
+       </div>
+
+       <div id="cloudtag">
+           {loop="$tags"}
+               <div class="tag-{function="ceil($value.size)"}">
+                  <a
+                      href="?searchtags={$key|urlencode}">{$key}</a>
+                  {loop="$value.tag_plugin"}
+                      {$value}
+                  {/loop}
+               </div>
+           {/loop}
+       </div>
+
+       <div id="plugin_zone_end_tagcloud" class="plugin_zone">
+           {loop="$plugin_end_zone"}
+               {$value}
+           {/loop}
+       </div>
+
+{include="page.footer"}
+</div>
+</body>
+</html>
