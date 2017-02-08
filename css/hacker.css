@@ -454,3 +454,18 @@ footer a:hover {
    }
 }
 
+input, textarea {
+	background-color: #dedede;
+	padding:5px;
+	border-radius: 5px 5px 5px 5px;
+	border: none;
+	color:#000;
+}
+
+#loginform>div {
+	margin: 5px 0;
+}
+
+#loginform label.small {
+	font-size: 0.8em;
+}
