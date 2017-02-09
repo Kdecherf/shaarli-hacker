@@ -141,7 +141,7 @@ header ul li a:hover {
    list-style: none;
    background-color: #fff;
 }
-.tableview li, .paging, #cloudtag {
+.tableview li, .paging, #cloudtag, #editlinkform {
    display: block;
    border-bottom: 1px solid #e0e0e0;
    padding: 10px;
@@ -189,6 +189,24 @@ div.searchform>div {
 }
 #cloudtag a:hover {
    border-bottom-style: solid;
+}
+#editlinkform label {
+   display: block;
+}
+#editlinkform input[type="text"], #editlinkform textarea {
+   margin-top: 5px;
+   margin-bottom: 10px;
+   max-width: 300px;
+   width: 100%;
+}
+#editlinkform div.md_help {
+   display: none;
+}
+#editlinkform br {
+   display: none;
+}
+#editlinkform .buttons {
+   margin-top: 10px;
 }
 footer {
    display: block;

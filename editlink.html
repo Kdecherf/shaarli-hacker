@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link type="text/css" rel="stylesheet" href="inc/awesomplete.css#" />
+    {include="includes"}
+</head>
+<body
+{if="$link.title==''"}onload="document.linkform.lf_title.focus();"
+{elseif="$link.description==''"}onload="document.linkform.lf_description.focus();"
+{else}onload="document.linkform.lf_tags.focus();"{/if} >
+<div class="view">
+    {if="$source !== 'firefoxsocialapi' && $source !== 'shiny_shaarli'"}
+   <header>
+       {include="page.header"}
+   </header>
+
+    {else}
+    <div id="shaarli_title">Add a link to <a href="{$titleLink}">{$shaarlititle}</a></div>
+    {/if}
+    <div id="editlinkform">
+        <form method="post" name="linkform">
+            <input type="hidden" name="lf_linkdate" value="{$link.linkdate}">
+          {if="isset($link.id)"}
+	          <input type="hidden" name="lf_id" value="{$link.id}">
+          {/if}
+            <label for="lf_url"><em>URL</em></label><input type="text" name="lf_url" id="lf_url" value="{$link.url}" class="lf_input">
+            <label for="lf_title"><em>Title</em></label><input type="text" name="lf_title" id="lf_title" value="{$link.title}" class="lf_input">
+            <label for="lf_description"><em>Description</em></label><textarea name="lf_description" id="lf_description" rows="4" cols="25">{$link.description}</textarea>
+            <label for="lf_tags"><em>Tags</em></label>
+            <input type="text" name="lf_tags" id="lf_tags" value="{$link.tags}" class="lf_input"
+                data-list="{loop="$tags"}{$key}, {/loop}" data-multiple autocomplete="off" >
+
+            {loop="$edit_link_plugin"}
+                {$value}
+            {/loop}
+
+            {if="($link_is_new && $default_private_links) || $link.private == true"}
+            <label for="lf_private"><input type="checkbox" checked="checked" name="lf_private" id="lf_private">
+            &nbsp;<em>Private</em></label>
+            {else}
+            <label for="lf_private"><input type="checkbox"  name="lf_private" id="lf_private">
+            &nbsp;<em>Private</em></label>
+            {/if}
+            <div class="buttons">
+               <input type="submit" value="Save" name="save_edit" class="bigbutton">
+               <input type="submit" value="Cancel" name="cancel_edit" class="bigbutton">
+               {if="!$link_is_new && isset($link.id)"}
+                 <a href="?delete_link&amp;lf_linkdate={$link.id}&amp;token={$token}"
+                    name="delete_link" class="bigbutton"
+                    onClick="return confirmDeleteLink();">
+                   {'Delete'|t}
+                 </a>
+               {/if}
+               </div>
+            <input type="hidden" name="token" value="{$token}">
+            {if="$http_referer"}<input type="hidden" name="returnurl" value="{$http_referer}">{/if}
+        </form>
+    </div>
+{if="$source !== 'firefoxsocialapi' && $source !== 'shiny_shaarli'"}
+{include="page.footer"}
+{/if}
+</div>
+<script src="inc/awesomplete.min.js#"></script>
+<script src="inc/awesomplete-multiple-tags.js#"></script>
+<script>
+    awesompleteUniqueTag('#lf_tags');
+</script>
+</body>
+</html>
