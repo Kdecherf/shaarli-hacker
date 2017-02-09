@@ -15,11 +15,15 @@
 
     {include="linklist.paging"}
 
-    <div id="plugin_zone_start_linklist" class="plugin_zone">
-        {loop="$plugin_start_zone"}
-            {$value}
-        {/loop}
-    </div>
+    <div class="searchform">
+      <form method="GET" name="searchform">
+         <input type="text" tabindex="1" id="searchform_value" name="searchterm" placeholder="Search"
+            {if="!empty($search_term)"}
+               value="{$search_term}"
+            {/if}
+         >
+         <input type="submit" value="Search" class="bigbutton">
+      </form>
 
     {if="count($links)==0"}
         <div id="searchcriteria">Nothing found.</div>
@@ -40,6 +44,13 @@
             {/if}
         </div>
     {/if}
+    </div>
+
+    <div id="plugin_zone_start_linklist" class="plugin_zone">
+        {loop="$plugin_start_zone"}
+            {$value}
+        {/loop}
+    </div>
     <ul class="tableview tableview-links">
         {loop="$links"}
         <li class="post-link{if="$value.class"} {$value.class}{/if}">
