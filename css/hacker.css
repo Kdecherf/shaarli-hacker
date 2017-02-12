@@ -141,7 +141,7 @@ header ul li a:hover {
    list-style: none;
    background-color: #fff;
 }
-.tableview li, .paging, #cloudtag, #editlinkform {
+.tableview li, .paging, #cloudtag, #editlinkform, .main-content {
    display: block;
    border-bottom: 1px solid #e0e0e0;
    padding: 10px;
@@ -207,6 +207,31 @@ div.searchform>div {
 }
 #editlinkform .buttons {
    margin-top: 10px;
+}
+#toolsdiv>a {
+   display: block;
+   text-decoration: none;
+   margin-top: 15px;
+}
+#toolsdiv a:hover {
+   text-decoration: underline;
+}
+#toolsdiv span {
+   font-style: italic;
+   font-size: 0.9em;
+   color: #454545;
+}
+#changetagform form>div {
+   margin: 5px 0px;
+}
+.tableview-links li span.via,
+.tableview-links li a.via,
+.tableview-links li a.via:visited {
+   text-decoration: none;
+   color: #64B5F6;
+}
+.tableview-links li a.via:hover {
+   text-decoration: underline;
 }
 footer {
    display: block;
