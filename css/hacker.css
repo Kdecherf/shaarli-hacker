@@ -278,6 +278,12 @@ footer {
 }
 .tableview-links li .metadata .linkdescription .markdown p {
    margin: 0.5em 0;
+   line-height: 21px;
+   color: #333333;
+}
+.markdown blockquote {
+   padding-left: 1.75em!important;
+   font-style: italic;
 }
 .tableview-links li .metadata .inline-block {
    font-size: 12px;
