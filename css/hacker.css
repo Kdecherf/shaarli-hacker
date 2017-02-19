@@ -530,3 +530,14 @@ input, textarea {
 #loginform label.small {
 	font-size: 0.8em;
 }
+
+fieldset {
+   border-radius: 5px;
+   border-width: 1px;
+   border-style: solid;
+   margin-bottom: 10px;
+}
+
+fieldset > legend {
+   font-style: italic;
+}
