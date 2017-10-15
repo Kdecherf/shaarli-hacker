@@ -26,9 +26,6 @@
     <li><a href="?do=login" title="Login" class="fa fa-sign-in"><span class="sr-only">Login</span></a></li>
     {/if}
     <li><a href="{$feedurl}?do=rss{$searchcrits}" class="nomobile fa fa-rss"><span class="sr-only">RSS Feed</span></a></li>
-    {if="$showatom"}
-    <li><a href="{$feedurl}?do=atom{$searchcrits}" class="nomobile">ATOM Feed</a></li>
-    {/if}
     {loop="$plugins_header.buttons_toolbar"}
         <li><a
             {loop="$value.attr"}
