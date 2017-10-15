@@ -266,6 +266,9 @@ footer {
    vertical-align: text-top;
    font-size: 1.3em;
 }
+.tableview-links li .story {
+   max-width: calc(100% - 36px);
+}
 .tableview-links li .story strong{
    font-weight: normal;
    display: block;
@@ -467,6 +470,9 @@ footer a:hover {
    font-size: 14px;
    display: block;
    margin-top: 3px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
 }
 .inline-block{
    display: inline-block;
