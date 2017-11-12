@@ -566,3 +566,17 @@ span#buffer-counter.exceeding {
    color: #cc0000;
    font-weight: bold;
 }
+
+#editlinkform div.buffer-strategies {
+   margin-top: 3px;
+}
+
+#editlinkform div.buffer-strategies label {
+   display: inline-flex;
+   width: 30%;
+   margin: 3px 0;
+}
+
+#editlinkform div.buffer-strategies label input {
+   vertical-align: middle;
+}
