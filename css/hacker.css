@@ -196,8 +196,11 @@ div.searchform>div {
 #editlinkform input[type="text"], #editlinkform textarea {
    margin-top: 5px;
    margin-bottom: 10px;
-   max-width: 300px;
+   max-width: 600px;
    width: 100%;
+}
+#editlinkform textarea {
+   font-size: 0.75em;
 }
 #editlinkform div.md_help {
    display: none;
@@ -551,20 +554,30 @@ fieldset > legend {
 /**
  * Buffer styles
  */
-
+div.buffer-text {
+   position: relative;
+}
 textarea#buffer-text {
+   height: 75px;
+   font-size: 0.7em;
    margin-bottom: 0px;
 }
 span#buffer-counter {
    display: block;
-   font-size: 0.8em;
+   font-size: 0.6em;
    font-style: italic;
-   margin-left: 125px;
    color: #666;
+   position: absolute;
+   left: 10px;
+   bottom: 10px;
 }
 span#buffer-counter.exceeding {
    color: #cc0000;
    font-weight: bold;
+}
+div.buffer-helpers {
+   padding-left: 25px;
+   margin-bottom: 10px;
 }
 
 #editlinkform div.buffer-strategies {
